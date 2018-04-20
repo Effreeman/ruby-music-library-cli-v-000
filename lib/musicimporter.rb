@@ -1,22 +1,17 @@
 class MusicImporter
-  attr_accessor :path, :files
+  attr_accessor :path
 
   def initialize(path)
     @path = path
-    @files = []
   end
 
-def files
-  filelist = Dir.glob("#{@path}/*.mp3")
-  filelist.map do |file|
-    file.gsub!("#{@path}/","")
-  end
-  filelist
-end
-
-def import
-  files.each do |filename|
-    song.create_from_filename(filename)
+  def files
+      Dir.entries(path).select{|f|f.include?(".mp3")}
     end
-  end 
-end
+    
+    def import 
+      files.each {|filename| Song.create_from_filename(filename)}
+    end
+    
+    
+  end
