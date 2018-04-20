@@ -19,8 +19,8 @@ class Song
       @@all
     end
 
-    def destrpy_all
-      @@all = []
+    def self.destrpy_all
+      @@all.clear 
     end
 
     def save
