@@ -1,6 +1,6 @@
 Class Song
   attr_accessor :name, :genre
-  attr_reader :artist 
+  attr_reader :artist
   extend Concerns::Findable
     @@all = []
 
