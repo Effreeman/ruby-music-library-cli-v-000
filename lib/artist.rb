@@ -1,6 +1,7 @@
 class Artist
   extend Concerns::Findable
-  attr_accessor :song, :name
+  attr_accessor :name
+  attr_ reader :songs 
   @@all = []
 
     def initialize(name)
