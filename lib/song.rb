@@ -19,7 +19,7 @@ class Song
       @@all
     end
 
-    def self.destrpy_all
+    def destrpy_all
       @@all = []
     end
 
