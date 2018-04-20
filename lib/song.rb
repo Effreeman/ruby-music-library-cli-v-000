@@ -1,5 +1,5 @@
 Class Song
-  attr_accessor :name, :genre
+  attr_accessor :name
   extend Concerns::Findable
     @@all = []
 
@@ -60,5 +60,5 @@ Class Song
     song = self.new_from_filename(filename)
     song.save
   end
-  
+
 end
