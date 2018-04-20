@@ -13,4 +13,10 @@ def files
   end
   filelist
 end
+
+def import
+  files.each do |filename|
+    song.create_from_filename(filename)
+    end
+  end 
 end
