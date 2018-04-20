@@ -1,5 +1,5 @@
 Class Song
-  attr_accessor :name, :genre 
+  attr_accessor :name, :genre
   attr_reader :artist 
   extend Concerns::Findable
     @@all = []
@@ -13,7 +13,7 @@ Class Song
         if genre
           self.genre = genre
         end
-    end
+  
 
     def self.all
       @@all
